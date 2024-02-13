@@ -1,7 +1,7 @@
 Research Track 1 - Assignment 2 Solution
 ================================
 The following repository contains the solution to the second assignment for the Research Track 1 Course, found in the Robotics Masters Programme at the University of Genoa, Italy. Within the linked repository are a series of python scripts that implement ROS nodes which interact with a predefined ROS package running a test environment on the gazebo simulator. Utilizing these nodes, a user can control the robot behaviour by: specifying a goal position the robot should move towards, stopping robot movement by cancelling a specified goal as well as be able to monitor certain semantic data of the robot.
-
+<br>
 
 Table of Contents
 ----------------------
@@ -10,12 +10,12 @@ Table of Contents
 3. [How to Install]()
 4. [How to run]()
 5. [Code Flowcharts]()
-
+<br>
 
 Prerequisites
 ----------------------
 In order to be able to run the simulator, the "assignment_2_2023" ROS package is needed. The package can be installed from the following Github repository: *https://github.com/CarmineD8/assignment_2_2023*.
-
+<br>
 
 Project Contents
 ----------------------
@@ -29,7 +29,7 @@ The ROS node "last_target" that implements the rosservice "last_target_serv" whi
 
 3. average_py.py<br>
 The ROS node "average" that implements another rosservice "average_serv" which when called, returns the robots average speed and distance from the target. Utilizes the data published by the node "UI" on the topic "/robot_vector" to carry out the computations.
-
+<br>
 
 How to Install
 ----------------------
@@ -43,7 +43,7 @@ $ git clone "https://github.com/Markie3110/Research_Track_1-Assignment_2.git"
 
 2. Download the .zip from Github<br>
 In a browser go to the repository on Github and download the .zip file availabe in the code dropdown box found at the top right. Unzip the file to access the contents.
-
+<br>
 
 How to Run
 ----------------------
@@ -63,7 +63,7 @@ rosservice call last_target_serv
 ```bash
 rosservice call average_serv
 ```
-
+<br>
 
 Code Flowcharts
 ----------------------
