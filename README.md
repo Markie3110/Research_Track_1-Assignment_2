@@ -62,33 +62,28 @@ rosservice call average_serv
 
 Code Flowcharts
 ----------------------
-The solution to the assignment was broken down into steps. Actions that are carried out repeatedly were coded into several functions that are called from a main function that controls the overall robot behaviour. In general the code works by first having the robot turn clockwise and counterclockwise to note down the codes of all boxes visible to it at the moment in its internal memory, as well as to mark the box closest to it. The position of this box, which we shall call the prime box, will be the one we bring all of the other boxes to. After finding the prime, the robot searches for every box stored in its memory and transports them to the prime. Once the robot places a box at the target, the robot updates its internal memory to reflect this change. The robot has also been programmed to keep on looking for new boxes it may have missed in the intial search, as it carries out its tasks. If any such box is detected, it is added to the list. Once all the boxes the robot has come across have been transported to the prime, the program ends.  
-Given below is the pseudocode for the various functions:  
+The flowcharts describing the program flow of the various functions found in the "UI" node are given below:
 
 
-### detect_boxes ###
+### main ###
+The main function that is run when the python script is executed. Create the ROS node, and calls a UIClient class that handles the actionclient behaviour. Also subscribes to the topic "/odom" to get the latest robot position and twist.
+![MainFlow](Main.png)
 
+### __init__ ###
+The first function that is executed when the UIClient class is called. 
+![InitFlow](Init.png)
 
+### feedback_cb ###
+A callback that executes whenever the client receives a feedback message from the server.
+![FeedbackFlow](Feedback_cb.png)
 
-### scan_for_closest_box ###
+### done_cb ###
+A callback that executes whenever the client receives a done message from the server.
+![DoneFlow](Done_cb.png)
 
-
-
-
-### detect_closest_box ###
->
-
-
-### drive ###
-
-
-
-
-### turn ###
-
-
-
-### find_box ###
+### odom_callback ###
+A callback to the subscriber for "/odom" that executes whenever the node receives new data.
+![OdomFlow](Odom_callback.png)
 
 
 
