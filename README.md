@@ -22,10 +22,10 @@ The project has three elementary python scripts of interest, each of which imple
 Implements the node "UI", that utilizes an actionclient subscribed to the actionserver "/reaching_goal" to create a user interface that allows the user to send and preempt robot goals. This node also publishes the robots position and twist to a custom topic "/robot_vector", that is utilized by the "average" node (explained below).
 
 2. last_target_py.py<br>
-Implements the rosservice "last_target" which when called, prints the latest goal position specified by the user. Obtains the latest goal via a subscription to the "/goal" topic of the "reaching_goal" actionserver.
+The ROS node "last_target" that implements the rosservice "last_target_serv" which when called, prints the latest goal position specified by the user. Obtains the latest goal via a subscription to the "/goal" topic of the "reaching_goal" actionserver.
 
 3. average_py.py<br>
-Implements another rosservice "average" which when called, returns the robots average speed and distance from the target. Utilizes the data published by the node "UI" on the topic "/robot_vector" to carry out the computations.
+The ROS node "average" that implements another rosservice "average_serv" which when called, returns the robots average speed and distance from the target. Utilizes the data published by the node "UI" on the topic "/robot_vector" to carry out the computations.
 
 
 How to Install
@@ -43,12 +43,26 @@ In a browser go to the repository on Github and download the .zip file availabe 
 
 How to Run
 ----------------------
-To run the solution go to robot-sim in your local system and type the following:
+To run the nodes carry out the following steps:<br>
+In the command line of the terminal, run the rosmaster via the following command:
 ```bash
-python3 run.py assignment.py
+roscore
+```<br>
+To run the simulator, open another window of the terminal and execute the following command:
+```bash
+roslaunch assignment_2_sol assignment2.launch
+```<br>
+To call the rosservices, enter the following ros calls in a seperate third terminal to view the results:<br>
+For last_target<br>
+```bash
+rosservice call last_target_serv
+```<br>
+For average<br>
+```bash
+rosservice call average_serv
 ```
 
-Code Flowcharts
+How to Run
 ----------------------
 The solution to the assignment was broken down into steps. Actions that are carried out repeatedly were coded into several functions that are called from a main function that controls the overall robot behaviour. In general the code works by first having the robot turn clockwise and counterclockwise to note down the codes of all boxes visible to it at the moment in its internal memory, as well as to mark the box closest to it. The position of this box, which we shall call the prime box, will be the one we bring all of the other boxes to. After finding the prime, the robot searches for every box stored in its memory and transports them to the prime. Once the robot places a box at the target, the robot updates its internal memory to reflect this change. The robot has also been programmed to keep on looking for new boxes it may have missed in the intial search, as it carries out its tasks. If any such box is detected, it is added to the list. Once all the boxes the robot has come across have been transported to the prime, the program ends.  
 Given below is the pseudocode for the various functions:  
