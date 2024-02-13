@@ -1,0 +1,6 @@
+# Request
+---
+# Response
+float64 last_x
+float64 last_y
+float64 last_z

@@ -1,0 +1,7 @@
+<launch>
+    <include file="$(find assignment_2_2023)/launch/assignment1.launch" />
+    <param name="window_size" type="int" value="5" />
+    <node name="UI" pkg="assignment_2_sol" type="user_interface_py.py" output="screen" />
+    <node name="last_target" pkg="assignment_2_sol" type="last_target_py.py" output="log" />
+    <node name="average" pkg="assignment_2_sol" type="average_py.py" output="log" />
+</launch>
