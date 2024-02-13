@@ -1,15 +1,15 @@
 Research Track 1 - Assignment 2 Solution
 ================================
 The following repository contains the solution to the second assignment for the Research Track 1 Course, found in the Robotics Masters Programme at the University of Genoa, Italy. Within the linked repository are a series of python scripts that implement ROS nodes which interact with a predefined ROS package running a test environment on the gazebo simulator. Utilizing these nodes, a user can control the robot behaviour by: specifying a goal position the robot should move towards, stopping robot movement by cancelling a specified goal as well as be able to monitor certain semantic data of the robot.
-<br>
+<br><br>
 
 Table of Contents
 ----------------------
-1. [Prerequisites]()
-2. [Project Contents]()
-3. [How to Install]()
-4. [How to run]()
-5. [Code Flowcharts]()
+1. [Prerequisites](https://github.com/Markie3110/Research_Track_1-Assignment_2/tree/main?tab=readme-ov-file#prerequisites)
+2. [Project Contents](https://github.com/Markie3110/Research_Track_1-Assignment_2/tree/main?tab=readme-ov-file#project-contents)
+3. [How to Install](https://github.com/Markie3110/Research_Track_1-Assignment_2/tree/main?tab=readme-ov-file#how-to-install)
+4. [How to run](https://github.com/Markie3110/Research_Track_1-Assignment_2/tree/main?tab=readme-ov-file#how-to-run)
+5. [Code Flowcharts](https://github.com/Markie3110/Research_Track_1-Assignment_2/tree/main?tab=readme-ov-file#code-flowcharts)
 <br>
 
 Prerequisites
