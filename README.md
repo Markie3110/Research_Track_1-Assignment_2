@@ -73,7 +73,9 @@ The main function that is run when the python script is executed. Create the ROS
 
 ### __init__ ###
 The first function that is executed when the UIClient class is called. 
-![InitFlow](Init.png)
+<center>
+  ![InitFlow](Init.png)
+</center>
 
 
 
