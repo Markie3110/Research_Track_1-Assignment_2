@@ -1,28 +1,44 @@
 Research Track 1 - Assignment 2 Solution
 ================================
-The following repository contains the solution to the first assignment for the Research Track 1 Course, found in the Robotics Masters Programme at the University of Genoa, Italy. The problem statement along with any 
-necessary files can be found at *https://github.com/CarmineD8/python_simulator*. Within the linked repository is a simulator that is capable of depicting a differential drive robot and some boxes in an arena. The goal 
-of the assignment is to program the robot with the help of some predefined functions such that it can detect all the boxes within the arena space, and move them to a single position. The position can be arbitary and it 
-is for the programmer to decide how they want to carry out the execution.
+The following repository contains the solution to the second assignment for the Research Track 1 Course, found in the Robotics Masters Programme at the University of Genoa, Italy. Within the linked repository are a series of python scripts that implement ROS nodes which interact with a predefined ROS package running a test environment on the gazebo simulator. Utilizing these nodes, a user can control the robot behaviour by: specifying a goal position the robot should move towards, stopping robot movement by cancelling a specified goal as well as be able to monitor certain semantic data of the robot.
 
 Table of Contents
 ----------------------
-1. [Project Contents]()
-2. [How to Install]()
-3. [How to run]()
+1. [Prerequisites]()
+2. [Project Contents]()
+3. [How to Install]()
+4. [How to run]()
 5. [Code Flowcharts]()
+
+Prerequisites
+----------------------
+In order to be able to run the simulator, the "assignment_2_2023" ROS package is needed. The package can be installed from the following Github repository: *https://github.com/CarmineD8/assignment_2_2023*.
+
+Project Contents
+----------------------
+The project has three elementary python scripts of interest, each of which implement a ROS node with a specific functionality.
+
+1. user_interface_py.py<br>
+Implements the node "UI", that utilizes an actionclient subscribed to the actionserver "/reaching_goal" to create a user interface that allows the user to send and preempt robot goals. This node also publishes the robots position and twist to a custom topic "/robot_vector", that is utilized by the "average" node (explained below).
+
+2. last_target_py.py<br>
+Implements the rosservice "last_target" which when called, prints the latest goal position specified by the user. Obtains the latest goal via a subscription to the "/goal" topic of the "reaching_goal" actionserver.
+
+3. average_py.py<br>
+Implements another rosservice "average" which when called, returns the robots average speed and distance from the target. Utilizes the data published by the node "UI" on the topic "/robot_vector" to carry out the computations.
+
 
 How to Install
 ----------------------
 To download the repsitory's contents to your local system you can do one of the following:
 
-1. Using git from your local system
-To download the repo using git simply go to your terminal and go to the directory you want to save the project in. Type the following command to clone the repository to your local folder:
+1. Using git from your local system<br>
+To download the repo using git simply go to your terminal and go to the src directory within your ROS workspace. Type the following command to clone the repository to your folder:
 ```bash
 $ git clone "https://github.com/Markie3110/Research_Track_1-Assignment_2.git"
 ```
 
-2. Download the .zip from Github
+2. Download the .zip from Github<br>
 In a browser go to the repository on Github and download the .zip file availabe in the code dropdown box found at the top right. Unzip the file to access the contents.
 
 How to Run
