@@ -52,12 +52,10 @@ roscore
 ```bash
 roslaunch assignment_2_sol assignment2.launch
 ```
-3. To call the rosservices, enter the following ros calls in a seperate third terminal to view the results:<br>
-For last_target
+3. To call the rosservices last_target_serv and average_serv, enter the following ros calls in a seperate third terminal to view the results:<br>
 ```bash
 rosservice call last_target_serv
 ```
-For average
 ```bash
 rosservice call average_serv
 ```
