@@ -15,7 +15,7 @@ Table of Contents
 Prerequisites
 ----------------------
 In order to be able to run the simulator, the "assignment_2_2023" ROS package is needed. The package can be installed from the following Github repository: *https://github.com/CarmineD8/assignment_2_2023*.
-<br>
+<br><br>
 
 Project Contents
 ----------------------
