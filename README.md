@@ -73,7 +73,7 @@ The flowcharts describing the program flow of the various functions found in the
 ### main ###
 The main function that is run when the python script is executed. Create the ROS node, and calls a UIClient class that handles the actionclient behaviour. Also subscribes to the topic "/odom" to get the latest robot position and twist.
 <p align="center">
-  <img src="Main.png">
+  <img src="Pics/Main.png">
 </p>
 <br>
 <br>
