@@ -94,8 +94,3 @@ A callback that executes whenever the client receives a done message from the se
 A callback to the subscriber for "/odom" that executes whenever the node receives new data.
 ![OdomFlow](Odom_callback.png)
 
-
-
-
-### main ###
-
