@@ -47,16 +47,16 @@ To run the nodes carry out the following steps:<br>
 In the command line of the terminal, run the rosmaster via the following command:
 ```bash
 roscore
-```<br>
+```
 To run the simulator, open another window of the terminal and execute the following command:
 ```bash
 roslaunch assignment_2_sol assignment2.launch
-```<br>
+```
 To call the rosservices, enter the following ros calls in a seperate third terminal to view the results:<br>
 For last_target<br>
 ```bash
 rosservice call last_target_serv
-```<br>
+```
 For average<br>
 ```bash
 rosservice call average_serv
