@@ -73,9 +73,8 @@ The flowcharts describing the program flow of the various functions found in the
 ### main ###
 The main function that is run when the python script is executed. Create the ROS node, and calls a UIClient class that handles the actionclient behaviour. Also subscribes to the topic "/odom" to get the latest robot position and twist.
 <p align="center">
-  <img src="Pics/Main.png">
+  <img src="Main.png">
 </p>
-<br>
 <br>
 
 
@@ -85,7 +84,6 @@ The first function that is executed when the UIClient class is called.
   <img src="Init.png">
 </p>
 <br>
-<br>
 
 
 ### feedback_cb ###
@@ -94,7 +92,7 @@ A callback that executes whenever the client receives a feedback message from th
   <img src="Feedback_cb.png">
 </p>
 <br>
-<br>
+
 
 ### done_cb ###
 A callback that executes whenever the client receives a done message from the server.
@@ -102,13 +100,12 @@ A callback that executes whenever the client receives a done message from the se
   <img src="Done_cb.png">
 </p>
 <br>
-<br>
+
 
 ### odom_callback ###
 A callback to the subscriber for "/odom" that executes whenever the node receives new data.
 <p align="center">
   <img src="Odom_callback.png">
 </p>
-<br>
 <br>
 
