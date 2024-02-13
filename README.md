@@ -70,7 +70,8 @@ The main function that is run when the python script is executed. Create the ROS
 <p align="center">
   <img src="Main.png">
 </p>
-
+<br>
+<br>
 
 
 ### __init__ ###
@@ -78,25 +79,31 @@ The first function that is executed when the UIClient class is called.
 <p align="center">
   <img src="Init.png">
 </p>
-
-
-
+<br>
+<br>
 
 
 ### feedback_cb ###
 A callback that executes whenever the client receives a feedback message from the server.
-![FeedbackFlow](Feedback_cb.png)
-
-
+<p align="center">
+  <img src="Feedback_cb.png">
+</p>
+<br>
+<br>
 
 ### done_cb ###
 A callback that executes whenever the client receives a done message from the server.
-![DoneFlow](Done_cb.png)
-
-
-
+<p align="center">
+  <img src="Done_cb.png">
+</p>
+<br>
+<br>
 
 ### odom_callback ###
 A callback to the subscriber for "/odom" that executes whenever the node receives new data.
-![OdomFlow](Odom_callback.png)
+<p align="center">
+  <img src="Odom_callback.png">
+</p>
+<br>
+<br>
 
