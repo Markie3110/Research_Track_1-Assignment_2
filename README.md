@@ -44,25 +44,25 @@ In a browser go to the repository on Github and download the .zip file availabe 
 How to Run
 ----------------------
 To run the nodes carry out the following steps:<br>
-In the command line of the terminal, run the rosmaster via the following command:
+1. In the command line of the terminal, run the rosmaster via the following command:
 ```bash
 roscore
 ```
-To run the simulator, open another window of the terminal and execute the following command:
+2. To run the simulator, open another window of the terminal and execute the following command:
 ```bash
 roslaunch assignment_2_sol assignment2.launch
 ```
-To call the rosservices, enter the following ros calls in a seperate third terminal to view the results:<br>
-For last_target<br>
+3. To call the rosservices, enter the following ros calls in a seperate third terminal to view the results:<br>
+For last_target
 ```bash
 rosservice call last_target_serv
 ```
-For average<br>
+For average
 ```bash
 rosservice call average_serv
 ```
 
-How to Run
+Code Flowcharts
 ----------------------
 The solution to the assignment was broken down into steps. Actions that are carried out repeatedly were coded into several functions that are called from a main function that controls the overall robot behaviour. In general the code works by first having the robot turn clockwise and counterclockwise to note down the codes of all boxes visible to it at the moment in its internal memory, as well as to mark the box closest to it. The position of this box, which we shall call the prime box, will be the one we bring all of the other boxes to. After finding the prime, the robot searches for every box stored in its memory and transports them to the prime. Once the robot places a box at the target, the robot updates its internal memory to reflect this change. The robot has also been programmed to keep on looking for new boxes it may have missed in the intial search, as it carries out its tasks. If any such box is detected, it is added to the list. Once all the boxes the robot has come across have been transported to the prime, the program ends.  
 Given below is the pseudocode for the various functions:  
