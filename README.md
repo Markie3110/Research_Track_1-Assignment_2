@@ -2,6 +2,7 @@ Research Track 1 - Assignment 2 Solution
 ================================
 The following repository contains the solution to the second assignment for the Research Track 1 Course, found in the Robotics Masters Programme at the University of Genoa, Italy. Within the linked repository are a series of python scripts that implement ROS nodes which interact with a predefined ROS package running a test environment on the gazebo simulator. Utilizing these nodes, a user can control the robot behaviour by: specifying a goal position the robot should move towards, stopping robot movement by cancelling a specified goal as well as be able to monitor certain semantic data of the robot.
 
+
 Table of Contents
 ----------------------
 1. [Prerequisites]()
@@ -10,9 +11,11 @@ Table of Contents
 4. [How to run]()
 5. [Code Flowcharts]()
 
+
 Prerequisites
 ----------------------
 In order to be able to run the simulator, the "assignment_2_2023" ROS package is needed. The package can be installed from the following Github repository: *https://github.com/CarmineD8/assignment_2_2023*.
+
 
 Project Contents
 ----------------------
@@ -41,6 +44,7 @@ $ git clone "https://github.com/Markie3110/Research_Track_1-Assignment_2.git"
 2. Download the .zip from Github<br>
 In a browser go to the repository on Github and download the .zip file availabe in the code dropdown box found at the top right. Unzip the file to access the contents.
 
+
 How to Run
 ----------------------
 To run the nodes carry out the following steps:<br>
@@ -59,6 +63,7 @@ rosservice call last_target_serv
 ```bash
 rosservice call average_serv
 ```
+
 
 Code Flowcharts
 ----------------------
