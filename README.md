@@ -70,6 +70,7 @@ Code Documentation
 ----------------------
 The Doxygen documentation for the code can be found at the following site *https://markie3110.github.io/Research_Track_1-Assignment_2/*.
 <br>
+<br>
 
 Code Flowcharts
 ----------------------
