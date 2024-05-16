@@ -9,7 +9,8 @@ Table of Contents
 2. [Project Contents](https://github.com/Markie3110/Research_Track_1-Assignment_2/tree/main?tab=readme-ov-file#project-contents)
 3. [How to Install](https://github.com/Markie3110/Research_Track_1-Assignment_2/tree/main?tab=readme-ov-file#how-to-install)
 4. [How to run](https://github.com/Markie3110/Research_Track_1-Assignment_2/tree/main?tab=readme-ov-file#how-to-run)
-5. [Code Flowcharts](https://github.com/Markie3110/Research_Track_1-Assignment_2/tree/main?tab=readme-ov-file#code-flowcharts)
+5. [Code Documentation]()
+6. [Code Flowcharts](https://github.com/Markie3110/Research_Track_1-Assignment_2/tree/main?tab=readme-ov-file#code-flowcharts)
 <br>
 
 Prerequisites
@@ -64,6 +65,10 @@ rosservice call last_target_serv
 rosservice call average_serv
 ```
 <br>
+
+Code Documentation
+----------------------
+The Doxygen documentation for the code can be found at the following site *https://markie3110.github.io/Research_Track_1-Assignment_2/*.
 
 Code Flowcharts
 ----------------------
